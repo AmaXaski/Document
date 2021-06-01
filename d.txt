@@ -1,0 +1,80 @@
+Создать Gitрепозиторий
+Из имеющейся директории
+cd project_dir
+git init
+git add .
+Из другого репози­тория
+git clone existing_dir new_dir
+git clone git://github.com/user/repo.git
+git clone https://github.com/user/repo.git
+Git - локальный изменения
+Изме­нения в рабочей директ­ории
+git status
+Зафиксированные файловые изменения
+git diff
+Добавить изменённые файлы
+git add file1 file2 file3
+Удалить файл
+git rm file
+git rm dir/ -r
+(рекурсивно внутри директ­ории)
+Посм­отреть файлы, готовые к фиксации
+git diff --cached
+Фиксация измене­ний
+git commit
+git commit -m "My message"
+git commit -a -m "My Message"
+(только зафикс­иро­ванные файлы, автома­тич­еское добавл­ение)
+Изме­нение последней фиксации
+git commit --amend
+Вернуть изменения в файл
+git checkout -- file
+Вернуть изменения (новая фиксац­ия)
+git revert HEAD
+Верн­уться к зафикс­иро­ванному состоя­нию
+git reset --hard HEAD
+ 	
+Git - история
+Показать все фиксации
+git log
+Краткий формат предыдущей команды
+git log pretty=short
+Патчи
+git log -p
+Показать фиксации файла
+git log file
+Показать фиксации в директории
+git log dir/
+Сост­ояния
+git log --stat
+Посм­отреть автора изменений файла
+git blame file
+Git - слияние/перебаза
+Слияние ветку в текущую
+git merge branch
+Пере­баз­ировать в ветку
+gir rebase branch
+git rebase master branch
+Отменить перебазирование
+git rebase --abort
+Инст­румент слияния для разрешения конфли­ктов
+git mergetool
+Конф­ликты против файла базы
+git diff --base file
+Diff изменений, сделанных другими людьми
+git diff --theirs file
+Diff ваших действий
+git diff --ours file
+После решения конфли­ктов
+git rebase --continue
+ 	
+Git - обновление/публикация
+Список удалённых объектов
+git remote -v
+Показать информ­ацию
+git remote show remote
+Добавить удалённый объект
+git remote add path/url
+Изменения Fetch
+git fetch remote
+Fetch + слияние
